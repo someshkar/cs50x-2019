@@ -22,7 +22,7 @@ main(void)
     if (len < 13 || len > 16 || len == 14)
     {
         printf("INVALID\n");
-        return 1;
+        return 0;
     }
     
     
@@ -56,15 +56,15 @@ main(void)
 
     
     // check modulo and starting numbers, print card type   
-    if (number[0] == 3 && (number[1] == 4 || number[1] == 7) && sum % 10 == 0 && (len == MAXLENGTH))
+    if (number[0] == 3 && (number[1] == 4 || number[1] == 7) && sum % 10 == 0)
     {
         printf("AMEX\n");
     }
-    else if (number[0] == 5 && number[1] > 0 && number[1] < 6 && sum % 10 == 0 && (len == MAXLENGTH))
+    else if (number[0] == 5 && number[1] > 0 && number[1] < 6 && sum % 10 == 0)
     {
         printf("MASTERCARD\n");
     }
-    else if (number[0] == 4 && sum % 10 == 0 && (len == MAXLENGTH))
+    else if (number[0] == 4 && sum % 10 == 0)
     {
         printf("VISA\n");
     }
