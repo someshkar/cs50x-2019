@@ -3,7 +3,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAXLENGTH   16      /* max credit card length */
+// max credit card length
+#define MAXLENGTH   16
 
 int
 main(void)
@@ -56,15 +57,15 @@ main(void)
 
     
     // check modulo and starting numbers, print card type   
-    if (number[0] == 3 && (number[1] == 4 || number[1] == 7) && sum % 10 == 0)
+    if (number[0] == 3 && (number[1] == 4 || number[1] == 7) && sum % 10 == 0 && (len == MAXLENGTH))
     {
         printf("AMEX\n");
     }
-    else if (number[0] == 5 && number[1] > 0 && number[1] < 6 && sum % 10 == 0)
+    else if (number[0] == 5 && number[1] > 0 && number[1] < 6 && sum % 10 == 0 && (len == MAXLENGTH))
     {
         printf("MASTERCARD\n");
     }
-    else if (number[0] == 4 && sum % 10 == 0)
+    else if (number[0] == 4 && sum % 10 == 0 && (len == MAXLENGTH))
     {
         printf("VISA\n");
     }
