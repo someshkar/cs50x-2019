@@ -3,8 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// max credit card length
-#define MAXLENGTH   16
+#define MAXLENGTH   16      /* max credit card length */
 
 int
 main(void)
